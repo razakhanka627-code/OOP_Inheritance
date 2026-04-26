@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class Area
+{
+public:
+    // area of square
+    void area(int side)
+    {
+        cout << "Area of Square :" << 4 * side << endl;
+    }
+    void area(int length, int width)
+    {
+        cout << "Area of Rectangle :" << length * width << endl;
+    }
+    void area(double radius)
+    {
+        cout << "Area of Circle :" << 3.14 * radius * radius << endl;
+    }
+};
+int main()
+{
+    Area sq;
+    sq.area(4);
+    Area re;
+    re.area(4, 3);
+    Area c;
+    c.area(2.2);
+}
