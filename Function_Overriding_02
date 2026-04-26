@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+class Employee
+{
+public:
+    virtual void salary()
+    {
+        cout << "Employee Salary : 30000" << endl;
+    }
+};
+class Manager : public Employee
+{
+public:
+    void salary()
+    {
+        cout << "Manager Salary : 50000" << endl;
+    }
+};
+class Developer : public Employee
+{
+public:
+    void salary()
+    {
+        cout << "Developer Salary : 60000" << endl;
+    }
+};
+int main()
+{
+    Employee *e;
+    Manager m1;
+    e = &m1;
+    e->salary();
+    Developer d1;
+    e = &d1;
+    e->salary();
+}
